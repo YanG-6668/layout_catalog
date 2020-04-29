@@ -8,8 +8,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 500;
-  font-size: 0;
   padding: 0 50px;
   margin-bottom: 50px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -18,12 +16,17 @@
     height: 40px;
     width: 40px; }
   .header .nav__list {
-    padding: 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin: 0; }
     .header .nav__list .nav__item {
-      display: inline-block; }
+      list-style: none; }
       .header .nav__list .nav__item .nav__link {
         font-size: 12px;
         line-height: 60px;
+        font-weight: 500;
         text-transform: uppercase;
         text-decoration: none;
         color: #000;
@@ -70,18 +73,19 @@
     background-color: #fff;
     border: 1px solid #f3f3f3;
     border-radius: 5px; }
-    .catalog .product__item .product__images {
+    .catalog .product__item .product__image {
       margin: 15px 5px 42px; }
-      .catalog .product__item .product__images .product__monitor {
+      .catalog .product__item .product__image .product__picture {
         text-align: center;
         width: 160px;
         height: 134px; }
     .catalog .product__item .product__title {
-      font-weight: 500;
       font-size: 12px;
       line-height: 15px;
-      padding-bottom: 5px;
-      margin: 0; }
+      font-weight: 500;
+      margin-bottom: 5px; }
+    .catalog .product__item .product__code {
+      margin-bottom: 15px; }
     .catalog .product__item .product__rating {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -92,18 +96,20 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      margin-top: 15px; }
+      margin-bottom: 17px; }
       .catalog .product__item .product__rating .product__stars .product__star {
         display: inline-block;
         width: 15px;
         height: 15px;
-        background: url(../images/star-active.svg) no-repeat center; }
-      .catalog .product__item .product__rating .product__stars:not(:last-child) {
-        margin-right: 4px; }
-      .catalog .product__item .product__rating .product__stars .product__star:last-child {
-        width: 15px;
-        height: 15px;
         background: url(../images/star.svg) no-repeat center; }
+        .catalog .product__item .product__rating .product__stars .product__star:not(:last-child) {
+          margin-right: 1px; }
+      .catalog .product__item .product__rating .stars--1 .product__star:nth-child(1),
+      .catalog .product__item .product__rating .stars--2 .product__star:nth-child(-n+2),
+      .catalog .product__item .product__rating .stars--3 .product__star:nth-child(-n+3),
+      .catalog .product__item .product__rating .stars--4 .product__star:nth-child(-n+4),
+      .catalog .product__item .product__rating .stars--5 .product__star:nth-child(-n+5) {
+        background: url(../images/star-active.svg) no-repeat center; }
     .catalog .product__item .product__price {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -114,19 +120,19 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 17px 0 20px; }
+      margin-bottom: 20px; }
       .catalog .product__item .product__price .product__cost {
         font-weight: 700;
         font-size: 16px;
         line-height: 19px; }
     .catalog .product__item .product__button {
-      font-size: 14px;
-      line-height: 16px;
       font-family: "Roboto", sans-serif;
       font-weight: 700;
-      color: #fff;
+      font-size: 14px;
+      line-height: 16px;
       text-transform: uppercase;
       cursor: pointer;
+      color: #fff;
       background-color: #00acdc;
       width: 170px;
       height: 40px;
@@ -142,10 +148,9 @@
           box-sizing: border-box; }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #000;
+  font-family: "Roboto", Arial , sans-serif;
   font-size: 11px;
-  line-height: 13px; }
+  line-height: 13px;
+  margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
