@@ -1,0 +1,19 @@
+@media (max-width: 965px) {
+  .header {
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  .nav {
+    &__list {
+      display: block;
+    }
+
+    &__link {
+      line-height: 30px;
+      &--is-active::after {
+        bottom: 15px;
+      }
+    }
+  }
+}
